@@ -8,7 +8,7 @@ const Card = ({name, subBreedhandler}) => {
         fetch(`https://dog.ceo/api/breed/${name}/images/random`)
         .then(res=>res.json())
         .then(data=>setDogImage(data))
-    }, [])
+    }, [name])
 
     return (
         <div className='card'>
